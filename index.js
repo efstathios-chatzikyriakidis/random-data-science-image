@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 8000
 
 const app = express();
 
-app.get('/v1', function (req, res) {
+app.get('/', function (req, res) {
   random_image_file_path = get_random_image_file_path()
 
   random_image_data = fs.readFileSync(random_image_file_path);
@@ -22,7 +22,7 @@ app.get('/v1', function (req, res) {
   res.end(random_image_data, 'binary');
 });
 
-app.get('/v2', function (req, res) {
+app.get('/experimentation', function (req, res) {
   random_image_file_path = get_random_image_file_path()
 
   google.searchByImageURL({
