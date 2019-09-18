@@ -1,8 +1,10 @@
 # random-data-science-image
 
-A Node.js web server that provides random data science images
+A Node.js web server that provides random data science images.
 
 ## Running Locally
+
+Make sure you have [Node.js](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
 $ git clone https://gitlab.com/efxa/random-data-science-image.git
