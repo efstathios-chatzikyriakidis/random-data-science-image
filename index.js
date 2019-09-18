@@ -1,23 +1,49 @@
+const path = require('path');
+
 const fs = require('fs');
 
-const http = require('http');
+const express = require('express');
 
-const mime = require('mime-types')
+const mime = require('mime-types');
 
-const path = require('path');
+const { google } = require('reverse-image-search');
 
 const PORT = process.env.PORT || 8000
 
-http.createServer(function (req, res) {
+const app = express();
+
+app.get('/v1', function (req, res) {
+  random_image_file_path = get_random_image_file_path()
+
+  random_image_data = fs.readFileSync(random_image_file_path);
+
+  res.writeHead(200, {'Content-Type': mime.lookup(random_image_file_path) });
+
+  res.end(random_image_data, 'binary');
+});
+
+app.get('/v2', function (req, res) {
+  random_image_file_path = get_random_image_file_path()
+
+  google.searchByImageURL({
+    imageFile: random_image_file_path
+  }).then(result => {
+    res.send(result);
+  }).catch(err => {
+    res.send(err);
+  });
+});
+
+app.listen(PORT, function () {
+  console.log(`Listening on ${PORT}`);
+});
+
+function get_random_image_file_path() {
   images_directory_path = 'images'
 
   image_file_names = fs.readdirSync(images_directory_path)
 
   chosen_image_file_name = image_file_names[Math.floor(Math.random() * image_file_names.length)]
 
-  random_image_data = fs.readFileSync(path.join(images_directory_path, chosen_image_file_name));
-
-  res.writeHead(200, {'Content-Type': mime.lookup(chosen_image_file_name) });
-
-  res.end(random_image_data, 'binary');
-}).listen(PORT, () => console.log(`Listening on ${PORT}`));
+  return path.join(images_directory_path, chosen_image_file_name);
+}
