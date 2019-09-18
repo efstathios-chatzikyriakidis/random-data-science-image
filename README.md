@@ -1,11 +1,11 @@
-## Random Data Science Image
+# random-data-science-image
 
-This is an experimental Node.js web server that provides random data science images!
+A Node.js web server that provides random data science images
 
 ## Running Locally
 
 ```sh
-$ git clone https://gitlab.com/efxa/random-data-science-image.git # or clone your own fork
+$ git clone https://gitlab.com/efxa/random-data-science-image.git
 $ cd random-data-science-image
 $ npm install
 $ npm start
@@ -20,3 +20,6 @@ $ heroku create
 $ git push heroku master
 $ heroku open
 ```
+or
+
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
