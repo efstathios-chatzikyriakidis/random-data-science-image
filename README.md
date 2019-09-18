@@ -16,7 +16,7 @@ Your app should now be running on [localhost:8000](http://localhost:8000/).
 ## Deploying to Heroku
 
 ```
-$ heroku create
+$ heroku create random-data-science-image
 $ git push heroku master
 $ heroku open
 ```

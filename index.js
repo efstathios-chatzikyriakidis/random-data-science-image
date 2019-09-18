@@ -1,6 +1,9 @@
 const fs = require('fs');
+
 const http = require('http');
+
 const mime = require('mime-types')
+
 const path = require('path');
 
 const PORT = process.env.PORT || 8000
@@ -17,4 +20,4 @@ http.createServer(function (req, res) {
   res.writeHead(200, {'Content-Type': mime.lookup(chosen_image_file_name) });
 
   res.end(random_image_data, 'binary');
-}).listen(PORT, () => console.log(`Listening on ${ PORT }`));
+}).listen(PORT, () => console.log(`Listening on ${PORT}`));
