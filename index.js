@@ -13,7 +13,7 @@ const app = express();
 app.get('/', function (req, res) {
   images_directory_path = 'images'
 
-  image_file_names = fs.readdirSync(images_directory_path)
+  image_file_names = fs.readdirSync(images_directory_path, { withFileTypes: true }).filter(o => !o.isDirectory());
 
   chosen_image_file_name = image_file_names[Math.floor(Math.random() * image_file_names.length)]
 
