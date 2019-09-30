@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000
 const app = express();
 
 app.get('/', function (req, res) {
-  images_directory_path = 'data-science-images'
+  images_directory_path = 'images'
 
   image_file_names = fs.readdirSync(images_directory_path, { withFileTypes: true }).filter(o => !o.isDirectory()).map(o => o.name);
 
