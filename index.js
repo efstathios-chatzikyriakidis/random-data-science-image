@@ -11,9 +11,9 @@ const PORT = process.env.PORT || 8000
 const app = express();
 
 app.get('/', function (req, res) {
-  images_directory_path = 'images'
+  images_directory_path = 'data-science-images'
 
-  image_file_names = fs.readdirSync(images_directory_path, { withFileTypes: true }).filter(o => !o.isDirectory()).map(o => o.name);
+  image_file_names = fs.readdirSync(images_directory_path, { withFileTypes: true }).filter(o => !o.isDirectory() && o.name !== '.git').map(o => o.name);
 
   chosen_image_file_name = image_file_names[Math.floor(Math.random() * image_file_names.length)]
 
