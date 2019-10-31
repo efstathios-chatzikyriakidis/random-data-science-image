@@ -1,6 +1,6 @@
 # random-data-science-image
 
-A Node.js web server that provides random data science images.
+A Node.js web application that provides random data science images.
 
 ## Running Locally
 
