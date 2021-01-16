@@ -7,7 +7,7 @@ A Heroku-based Node.js web application that provides random data science images.
 Make sure you have [Node.js 10.16.3](http://nodejs.org/) and the [Heroku CLI](https://cli.heroku.com/) installed.
 
 ```sh
-$ git clone --recursive https://gitlab.com/efxa/random-data-science-image.git
+$ git clone --recursive https://github.com/efstathios-chatzikyriakidis/data-science-images.git
 $ cd random-data-science-image
 $ npm install
 $ npm start
