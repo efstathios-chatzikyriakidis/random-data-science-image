@@ -1,21 +1,22 @@
 {
   "name": "random-data-science-image",
-  "version": "0.1.0",
-  "description": "A Node.js web server that provides random data science images",
+  "version": "1.0.0",
+  "description": "A Node.js web server built with Express that serves random data science images on request.",
   "engines": {
-    "node": "10.16.3"
+    "node": "20.17.0"
   },
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
-    "express": "4.17.1",
-    "mime-types": "2.1.24"
+    "express": "^4.19.2",
+    "mime-types": "^2.1.24"
   },
+  "author": "Efstathios Chatzikyriakidis",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/efxa/random-data-science-image"
+    "url": "git+https://github.com/efstathios-chatzikyriakidis/random-data-science-image.git"
   },
-  "license": "GPL-2.0-or-later"
+  "license": "GPL-3.0"
 }
