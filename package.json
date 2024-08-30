@@ -18,5 +18,6 @@
     "type": "git",
     "url": "git+https://github.com/efstathios-chatzikyriakidis/random-data-science-image.git"
   },
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "private": false
 }
