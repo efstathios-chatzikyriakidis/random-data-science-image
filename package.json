@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "A Node.js web server built with Express that serves random data science images on request.",
   "engines": {
-    "node": "20.17.0"
+    "node": "22.12.0"
   },
   "main": "index.js",
   "scripts": {
